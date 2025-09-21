@@ -1,5 +1,6 @@
 from pathlib import Path
 from datetime import date
+from config import DEST
 
 BASE_DIR = Path(__file__).parent
 
@@ -19,7 +20,7 @@ def write_output(path: Path, items: list[str]) -> None:
 
 def main():
     write_output(
-        path=Path(BASE_DIR / "outputs" / getting_date()).with_suffix(".md"),
+        path=Path(DEST / getting_date()).with_suffix(".md"),
         items=splitting_source(path=Path(BASE_DIR / "source.txt"))
     )
 
