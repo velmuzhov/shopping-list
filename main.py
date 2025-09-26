@@ -9,7 +9,7 @@ def getting_date() -> str:
 
 def splitting_source(path: Path) -> list[str]:
     with open(path) as file:
-        return file.read().lower().strip().split(", ")
+        return file.read().lower().strip().split(",")
          
 def write_output(path: Path, items: list[str]) -> None:
     with open(path, "w") as file:
